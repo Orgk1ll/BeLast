@@ -1,9 +1,8 @@
 import { Image, View, StatusBar, StyleSheet, SafeAreaView, TouchableOpacity, FlatList, ImageBackground } from 'react-native'
 import React, { Component } from 'react'
-import DropShadow from "react-native-drop-shadow";
-import { Text, TextInput } from 'react-native-paper';
-import { blue100 } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
+import { Text } from 'react-native-paper';
 import WeatherCard from './WeatherCard';
+
 
 
 class Weather extends Component {
@@ -13,17 +12,17 @@ class Weather extends Component {
             heat: '31.4',
             situation: 'Parçalı Bulutlu',
             day: 'Pazartesi',
-        },{
+        }, {
             id: '2',
             heat: '55',
             situation: 'Güneşli',
             day: 'Salı',
-        },{
+        }, {
             id: '3',
             heat: '28.5',
             situation: 'Yağmurlu',
             day: 'Çarşamba',
-        },{
+        }, {
             id: '4',
             heat: '33.4',
             situation: 'Parçalı Bulutlu',
@@ -71,9 +70,8 @@ class Weather extends Component {
                                     />
                                 </View>
                             </View>
-
-                </ImageBackground>
-            </View>
+                        </ImageBackground>
+                    </View>
                 </View >
 
 

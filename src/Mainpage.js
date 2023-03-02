@@ -4,6 +4,8 @@ import DropShadow from "react-native-drop-shadow";
 import { List } from 'react-native-paper';
 import SlideItem from './SlideItem';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Modal from "react-native-modal";
+
 
 
 
@@ -14,55 +16,57 @@ class Mainpage extends Component {
     {
       id: '1',
       name: 'Faruk',
-      answercount:53,
+      answercount: 53,
       title: 'Nasıl Yapılır ? ',
 
     },
     {
       id: '2',
       name: 'Merve',
-      answercount:24,
+      answercount: 24,
       title: 'Nasıl Olur ? ',
 
     },
     {
       id: '3',
       name: 'Berk',
-      answercount:63,
+      answercount: 63,
       title: 'Niye ? ',
 
     },
     {
       id: '4',
       name: 'Berk',
-      answercount:38,
+      answercount: 38,
       title: 'Niye ? ',
 
     },
     {
       id: '5',
       name: 'Berk',
-      answercount:87,
+      answercount: 87,
       title: 'Niye ? ',
 
     },
     {
       id: '6',
       name: 'Berk',
-      answercount:123,
+      answercount: 123,
       title: 'Niye ? ',
 
     },
     {
       id: '7',
       name: 'Berk',
-      answercount:89,
+      answercount: 89,
       title: 'Niye ? ',
 
     }
   ];
   state = {
-    expanded: true
+    expanded: true,
+    modalVisible: true
+
   }
 
   _handlePress = () =>
@@ -72,19 +76,37 @@ class Mainpage extends Component {
 
 
   render(navigation) {
+    const { modalVisible } = this.state;
+
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#FDCC03', flexDirection: 'column' }} >
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#FDCC03', flexDirection: 'column', justifyContent: 'center' }} >
 
         <StatusBar animated={true} backgroundColor='black' />
 
+        <Modal
+          animationType="slide"
+          transparent={true}
+          isVisible={modalVisible}
+          style={{ height: '100%', }}
+          onRequestClose={() => {
+            this.setState({ modalVisible: !modalVisible });
+          }}>
+          <View style={{ width: '100%', height: '70%', backgroundColor: 'white',borderRadius:20, justifyContent: 'flex-start', alignItems: 'flex-end' }}>
+            <TouchableOpacity onPress={() => this.setState({ modalVisible: !modalVisible })} style={{ marginRight: '2%', marginTop: '2%', backgroundColor: 'red', width: 40, height: 40, justifyContent: 'center', alignItems: 'center', borderRadius: 50 }}>
+              <Text style={{ color: 'black', fontSize: 26 }}>X</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+
         <ScrollView style={{ flex: 1 }}>
+
 
           <View style={{ flex: 0.3, backgroundColor: 'black', width: 600, height: 400, marginLeft: -100, marginTop: -100, borderBottomLeftRadius: 450, borderBottomRightRadius: 220 }}>
             <Image source={require('./image1.jpg')}
-              style={{flex: 1, opacity: 0.4, width: 600, height: 400, borderBottomLeftRadius: 450, borderBottomRightRadius: 220 }} />
+              style={{ flex: 1, opacity: 0.4, width: 600, height: 400, borderBottomLeftRadius: 450, borderBottomRightRadius: 220 }} />
           </View>
           <DropShadow style={styles.shadowProp}>
-            <TouchableOpacity  onPress={() => this.props.navigation.push('Weather')} style={styles.button}>
+            <TouchableOpacity onPress={() => this.props.navigation.push('Weather')} style={styles.button}>
               <Image source={require('./weather.png')} />
             </TouchableOpacity>
             <TouchableOpacity onPress={() => this.props.navigation.push('Map')} style={styles.button}>
@@ -147,12 +169,12 @@ class Mainpage extends Component {
             flex: 0.3,
             width: '100%'
           }}>
-            <TouchableOpacity onPress={() => this.props.navigation.push('Bir Bilen')} style={{ backgroundColor: 'black',flex:0.2, width: '120%', height: 50, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity onPress={() => this.props.navigation.push('Bir Bilen')} style={{ backgroundColor: 'black', flex: 0.2, width: '120%', height: 50, alignItems: 'center', justifyContent: 'center' }}>
               <Text style={{ fontWeight: 'bold', fontSize: 20, color: '#FDCC03', marginVertical: 5 }}>BİR BİLEN</Text>
             </TouchableOpacity>
             <FlatList data={this.birbilen} horizontal
-            renderItem={({item}) => <SlideItem item={item}/>}
-            /> 
+              renderItem={({ item }) => <SlideItem item={item} />}
+            />
           </DropShadow>
           <DropShadow style={{
             shadowOffset: { width: 6, height: 6 },
