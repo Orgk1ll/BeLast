@@ -1,7 +1,7 @@
 import { Image, FlatList, VirtualizedList, View, StatusBar, StyleSheet, SafeAreaView, Text, Dimensions, TouchableOpacity, ScrollView } from 'react-native'
 import React, { Component } from 'react'
 import DropShadow from "react-native-drop-shadow";
-import SlideItem from './SlideItem';
+import SlideItem from '../SlideItem';
 
 
 class BirBilen extends Component {
