@@ -7,6 +7,7 @@ import Mainpage from './src/Mainpage';
 import Login from './src/Login';
 import Cars from './src/Cars';
 import CarsDetail from './src/CarsDetail';
+import Profil from './src/Profil';
 
 
 
@@ -22,6 +23,7 @@ export default function App(navigation) {
                     <Stack.Screen name="Login" options={{ title: '', headerLeft: () => (<Image source={require('./src/logo.png')} style={{ width: 90, height: 50, resizeMode: 'stretch' }}></Image>) }} component={Login} />
                     <Stack.Screen name="CarsDetail" options={{ title: '', headerLeft: () => (<Image source={require('./src/logo.png')} style={{ width: 90, height: 50, resizeMode: 'stretch' }}></Image>) }} component={CarsDetail} />
                     <Stack.Screen name="Cars" options={{ title: '', headerLeft: () => (<Image source={require('./src/logo.png')} style={{ width: 90, height: 50, resizeMode: 'stretch' }}></Image>) }} component={Cars} />
+                    <Stack.Screen name="Profil" options={{ title: '', headerLeft: () => (<Image source={require('./src/logo.png')} style={{ width: 90, height: 50, resizeMode: 'stretch' }}></Image>) }} component={Profil} />
                 </Stack.Group>
             </Stack.Navigator>
         </NavigationContainer>
