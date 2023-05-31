@@ -33,7 +33,11 @@ export default class Login extends Component {
                                 <Text style={{ color: '#000' }}>Şifremi unuttum</Text>
                             </TouchableOpacity>
                         </View>
+<<<<<<< HEAD
                         <TouchableOpacity style={{ backgroundColor: '#004AAD', width: '50%', height: '10%', borderRadius: 40, alignItems: 'center', justifyContent: 'center',marginTop:'-20%' }}>
+=======
+                        <TouchableOpacity onPress={() => this.props.navigation.push('Home')} style={{ backgroundColor: '#004AAD', width: '50%', height: '10%', borderRadius: 40, alignItems: 'center', justifyContent: 'center',marginTop:'-20%' }}>
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
                             <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold' }}>Giriş Yap</Text>
                         </TouchableOpacity>
                     </View>

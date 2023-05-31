@@ -1,8 +1,12 @@
 import { SafeAreaView, StatusBar, Text, TouchableOpacity, View, Image, StyleSheet, useWindowDimensions, ImageBackground, Picker } from 'react-native'
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import DropShadow from 'react-native-drop-shadow';
 import { TabView, SceneMap } from 'react-native-tab-view';
 import { SelectList } from 'react-native-dropdown-select-list'
+=======
+import { TabView, SceneMap } from 'react-native-tab-view';
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
 
 
 const FirstRoute = () => (
@@ -59,6 +63,7 @@ const SecondRoute = () => {
     return (
         <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
             <View style={{ flex: 0.9, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
+<<<<<<< HEAD
                 <SelectList
                     setSelected={(val) => setSelected(val)}
                     data={data}
@@ -72,6 +77,9 @@ const SecondRoute = () => {
                     save="value"
                     placeholder='Teslim Edilecek Şube'
                 />
+=======
+                
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
             </View>
             <View style={{flex:0.1,alignItems:'center',justifyContent:'flex-end',marginBottom:'2%'}}>
             <TouchableOpacity style={{width:'95%',height:40,backgroundColor:'#004AAD',borderRadius:20,alignItems:'center',justifyContent:'center'}}>
@@ -96,6 +104,7 @@ export default function CarsDetail() {
         { key: 'first', title: 'Araba Detay' },
         { key: 'second', title: 'Rezervasyon' },
     ]);
+<<<<<<< HEAD
     const data = [
         { id: 1, title: 'Öğe 1' },
         { id: 2, title: 'Öğe 2' },
@@ -103,6 +112,9 @@ export default function CarsDetail() {
         { id: 4, title: 'Öğe 4' },
         { id: 5, title: 'Öğe 5' },
     ];
+=======
+
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#f5f5f5' }}>

@@ -49,7 +49,11 @@ class Mainpage extends Component {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: '#f5f5f5', flexDirection: 'column', justifyContent: 'center' }} >
 
+<<<<<<< HEAD
         <StatusBar animated={true} backgroundColor='#f5f5f5' />
+=======
+        <StatusBar animated={true} backgroundColor='#000000' />
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
 
         <ScrollView style={{ flex: 1 }}>
 
@@ -61,7 +65,11 @@ class Mainpage extends Component {
           <View style={{ flex: 0.6 }}>
 
             <DropShadow style={styles.shadowProp}>
+<<<<<<< HEAD
               <TouchableOpacity onPress={() => this.props.navigation.push('Login')} style={{
+=======
+              <TouchableOpacity onPress={() => this.props.navigation.push('Profil')} style={{
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
                 backgroundColor: '#ffffff',
                 width: '95%',
                 height: 90,

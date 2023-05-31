@@ -19,7 +19,10 @@
     "react": "18.2.0",
     "react-native": "^0.71.1",
     "react-native-drop-shadow": "^0.0.6",
+<<<<<<< HEAD
     "react-native-dropdown-picker": "^5.4.6",
+=======
+>>>>>>> 8a39b02d0bbd2144127e7e89ecbcc67de67ee2f3
     "react-native-dropdown-select-list": "^2.0.4",
     "react-native-element-dropdown": "^2.6.0",
     "react-native-fast-image": "^8.6.3",
